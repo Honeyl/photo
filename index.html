@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            margin: 50px;
+        }
+
+        #fj{
+            list-style: none;
+
+        }
+
+        #fj li{
+            float: left;
+            margin-left: 10px;
+        }
+
+        #big_img{
+            margin-left: 10px;
+            width: 780px;
+            height: 500px;
+        }
+
+        #des{
+            margin: 10px;
+            color: orangered;
+            font-size: 20px;
+        }
+       #fj  li a  img {
+           width: 148px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+<!--大图描述-->
+<p id="des">蒲公英</p>
+<!--大图展示-->
+<img id="big_img" src="y1.jpg" alt="" >
+<!--小图列表-->
+<ul id="fj" >
+    <li>
+        <a href="y1.jpg" title="温暖怀抱">
+            <img src="y1.jpg"  alt="温暖怀抱">
+        </a>
+    </li>
+    <li>
+        <a href="y2.jpg" title="南昌-赣江">
+            <img src="y2.jpg"  alt="南昌-赣江">
+        </a>
+    </li>
+    <li>
+        <a href="y3.jpg" title="九江-庐山">
+            <img src="y3.jpg"  alt="九江-庐山">
+        </a>
+    </li>
+    <li>
+        <a href="y4.jpg" title="九江-四码头">
+            <img src="y4.jpg"  alt="九江-四码头" >
+        </a>
+    </li>
+    <li>
+        <a href="y5.jpg" title="她说下雪了">
+            <img src="y5.jpg"  alt="她说下雪了">
+        </a>
+    </li>
+</ul>
+<script>
+    window.onload = function(){
+        //获取需要的标签
+        var des = document.getElementById("des");
+        var big_img = document.getElementById("big_img");
+        var ul = document.getElementById("fj");
+        var aList = ul.getElementsByTagName("a");
+        //绑定事件
+        for(var i=0; i<aList.length; i++){
+            aList[i].onclick = function () {
+
+                big_img.src = this.href;
+                des.innerHTML = this.title;
+
+                return false;
+            }
+        }
+    }
+</script>
+
+</body>
+</html>
