@@ -24,7 +24,7 @@
         }
 
         #big_img{
-            margin: auto o;
+            margin-left: 10px;
             width: 780px;
             height: 500px;
         }
@@ -68,8 +68,8 @@
         </a>
     </li>
     <li>
-        <a href="y5.jpg" title="她说下雪了">
-            <img src="y5.jpg"  alt="她说下雪了">
+        <a href="y5.jpg" title="九江 - 她说下雪了">
+            <img src="y5.jpg"  alt="九江 - 她说下雪了">
         </a>
     </li>
 </ul>
@@ -83,10 +83,10 @@
         //绑定事件
         for(var i=0; i<aList.length; i++){
             aList[i].onclick = function () {
-
+            //执行程序
                 big_img.src = this.href;
                 des.innerHTML = this.title;
-
+             //结束遍历，这样点击图片的时候就不会弹出来，直接在大图片中显示
                 return false;
             }
         }
